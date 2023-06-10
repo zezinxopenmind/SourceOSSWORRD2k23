@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sobre Nós</title>
+  <link rel="stylesheet" href="styleabout.css">
+  <style>
+    body {
+      background-color: #192033;
+      font-family: Arial, sans-serif;
+    }
+
+    .card-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 400px;
+      background-color: #262C3E;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-container img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .card-container h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .card-container p {
+      font-size: 16px;
+      color: #ffffff;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .language-select {
+      margin-top: 20px;
+    }
+
+    .language-select label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .language-select select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #262C3E;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    function changeLanguage() {
+      var select = document.getElementById("languageSelect");
+      var language = select.value;
+
+      if (language === "pt-br") {
+        document.title = "Sobre Nós";
+        document.getElementById("aboutTitle").innerHTML = "Sobre Nós";
+        document.getElementById("aboutText").innerHTML = "A SwordOS é uma empresa de tecnologia especializada em serviços de design gráfico. Somos apaixonados por criar designs visualmente impressionantes e impactantes para nossos clientes. Nossa equipe de talentosos designers trabalha em estreita colaboração com cada cliente para entender sua visão única e transformá-la em soluções de design inovadoras.";
+      } else if (language === "en") {
+        document.title = "About Us";
+        document.getElementById("aboutTitle").innerHTML = "About Us";
+        document.getElementById("aboutText").innerHTML = "SwordOS is a technology company specializing in graphic design services. We are passionate about creating visually stunning and impactful designs for our clients. Our team of talented designers works closely with each client to understand their unique vision and bring it to life through innovative design solutions.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="card-container">
+    <img src="static.png" alt="Logo">
+    <h1 id="aboutTitle">Sobre Nós</h1>
+    <p id="aboutText">A SwordOS é uma empresa de tecnologia especializada em serviços de design gráfico. Somos apaixonados por criar designs visualmente impressionantes e impactantes para nossos clientes. Nossa equipe de talentosos designers trabalha em estreita colaboração com cada cliente para entender sua visão única e transformá-la em soluções de design inovadoras.</p>
+    <div class="language-select">
+      <label for="languageSelect">Idioma:</label>
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="pt-br">Português (Brasil)</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+  background-color: #454545;
+  overflow: hidden;
+}
+
+.card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.discord-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00FF00;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.discord-button:hover {
+  transform: scale(1.1);
+}

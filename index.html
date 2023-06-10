@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Site</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos adicionais */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #00ff00;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: confetti-fall 4s infinite linear;
+    }
+
+    /* Animação de queda do confete */
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cross-container" id="crossContainer"></div>
+  
+  <div class="centered-text">
+    <h1><span class="letter-s">S</span>word</h1>
+    <h1 class="green-text"><span class="letter-o">O</span><span class="letter-s">S</span></h1>
+    <div class="discord-button" id="discordButton">
+      Discord Invite
+    </div>
+    <a href="about.html" class="about-button">Sobre nós</a>
+  </div>
+
+  <div id="confettiContainer"></div> <!-- Div para exibir o efeito de confete -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const crossContainer = document.getElementById("crossContainer");
+      const containerHeight = crossContainer.offsetHeight;
+      const crossCount = Math.ceil(containerHeight / 20);
+
+      for (let i = 0; i < crossCount; i++) {
+        const cross = document.createElement("div");
+        cross.className = "cross";
+        cross.style.top = (i * 20) + "px";
+        crossContainer.appendChild(cross);
+      }
+
+      const discordButton = document.getElementById("discordButton");
+
+      discordButton.addEventListener("mouseover", function() {
+        discordButton.style.transform = "scale(1.1)";
+      });
+
+      discordButton.addEventListener("mouseout", function() {
+        discordButton.style.transform = "scale(1)";
+      });
+
+      discordButton.addEventListener("click", function() {
+        window.location.href = "discord.html";
+      });
+      
+      // Efeito de confete
+      const confettiContainer = document.getElementById("confettiContainer");
+
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "%";
+        confetti.style.animationDelay = Math.random() * 4 + "s";
+        confettiContainer.appendChild(confetti);
+      }
+    });
+  </script>
+</body>
+</html>

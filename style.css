@@ -1,0 +1,75 @@
+body {
+  background: linear-gradient(to right, #ffffff 70%, #00ff00);
+}
+
+.cross-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 70%;
+}
+
+.centered-text {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.centered-text:hover {
+  transform: translate(-50%, -50%) translateY(-20px);
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 .letter-s,
+h1 .letter-o {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+h1.green-text {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.discord-button {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00ff00;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.discord-button:hover {
+  transform: scale(1.1);
+}
+
+.about-button {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00ff00;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.about-button:hover {
+  background-color: #009900;
+}
